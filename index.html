@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Aim</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23e94560' stroke-width='8'/><circle cx='50' cy='50' r='15' fill='%23e94560'/></svg>">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Circle Aim</h1>
+      <p class="subtitle">Click the circles as the ring shrinks</p>
+    </header>
+
+    <div class="controls">
+      <button id="btn-start">Start Game</button>
+      <button id="btn-stop" disabled>Stop Game</button>
+      <div class="settings-inline">
+        <label>Circles:
+          <select id="setting-count">
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="30" selected>30</option>
+            <option value="50">50</option>
+          </select>
+        </label>
+        <label>Speed:
+          <select id="setting-speed">
+            <option value="1200">Easy</option>
+            <option value="900" selected>Normal</option>
+            <option value="600">Hard</option>
+          </select>
+        </label>
+      </div>
+      <button id="btn-fullscreen" title="Fullscreen (F)">&#x26F6; Fullscreen</button>
+    </div>
+
+    <div id="playfield">
+      <div class="hud">
+        <div class="hud-item">
+          <span class="hud-label">Score</span>
+          <span id="hud-score" class="hud-value">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Combo</span>
+          <span id="hud-combo" class="hud-value">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Accuracy</span>
+          <span id="hud-accuracy" class="hud-value">0%</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Progress</span>
+          <span id="hud-progress" class="hud-value">0/0</span>
+        </div>
+      </div>
+      <div id="game-overlay" class="game-overlay">
+        <div class="overlay-content">
+          <p>Press <strong>Start Game</strong> to begin</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="history-section">
+      <div class="history-header">
+        <h2>Game History</h2>
+        <button id="btn-clear" class="btn-danger">Clear History</button>
+      </div>
+      <table id="history-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Score</th>
+            <th>Accuracy</th>
+            <th>Max Combo</th>
+            <th>Perfect</th>
+            <th>Good</th>
+            <th>Miss</th>
+          </tr>
+        </thead>
+        <tbody id="history-body">
+        </tbody>
+      </table>
+      <p id="history-empty" class="empty-msg">No games played yet</p>
+    </section>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

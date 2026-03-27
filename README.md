@@ -2,11 +2,15 @@
 
 A browser-based aim trainer inspired by osu! — click randomly spawning circles as the approach ring shrinks to score points.
 
+<p align="center">
+  <img src="ss.png" alt="Circle Aim Screenshot" width="700">
+</p>
+
 ## Play
 
 Open `index.html` in any modern browser. No server or build tools required.
 
-Or play online: [GitHub Pages link after enabling]
+Or play online: **[https://troke.id/circle-aim/](https://troke.id/circle-aim/)**
 
 ## Features
 
